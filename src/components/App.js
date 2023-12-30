@@ -37,7 +37,7 @@ function App() {
 
     <div className="App">
       <div className='containerStyleHome'>
-        <video autoPlay loop muted style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }}>
+        <video autoPlay loop muted style={{ position: 'absolute', width: '100%', height: '99%', objectFit: 'cover', zIndex: -1 }}>
           <source src={carreteraVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

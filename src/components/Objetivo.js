@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import logoCompletoNegro from '../images/logoCompletoNegro.png';
-import garperfirma from '../images/garperfirma.jpg';
 import camion from '../images/camion.png';
 
 const Objetivo = () => {

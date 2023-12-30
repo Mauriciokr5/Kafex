@@ -35,7 +35,8 @@ module.exports = {
     },
     devServer: {
         static: path.resolve(__dirname, 'src/public'),
-        port: 3000,
+        allowedHosts: 'all',
+        port: 300,
         hot: true
     },
 };
