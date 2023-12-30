@@ -11,7 +11,7 @@ import {
 import Popup from './Popup'; // Importa el componente Popup
 import Header from './Header';
 import Home from './Home';
-import Firma from './Firma'
+import Objetivo from './Objetivo'
 import Especialidades from './Especialidades';
 import Contacto from './Contacto';
 import Footer from './Footer';
@@ -46,7 +46,7 @@ function App() {
           <Home />
         </div>
       </div>
-      <Firma />
+      <Objetivo />
       <Especialidades />
       <Clientes />
       <Contacto />

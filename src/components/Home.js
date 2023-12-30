@@ -14,7 +14,7 @@ const Home = () => {
                 <Container>
                     {/* <img className="mainLogo" src={logoCompleto} alt="Logo" ></img> */}
                     <Row>
-                        <Col lg={7}>
+                        <Col lg={6}>
                             <h1 className='mainTitle'>EL SERVICIO DE TRASNPORTACIÓN PARA TI​</h1>
                             <Button href='#Contacto' className='btnHome'>Cotizar</Button>
                         </Col>

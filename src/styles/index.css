@@ -29,10 +29,10 @@
 
     --home-font: var(--main-font);
     --home-font-size: 50px;
-    --home-font-color: var(--color1);
+    --home-font-color: var(--color3);
     /* --home-ov-bg-color: linear-gradient(rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1)); */
     --home-ov-bg-color: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1) );
-    --home-ov-bg-color-res: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+    --home-ov-bg-color-res: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1) );
 
 
     --firma-font-title: var(--main-font);
@@ -330,10 +330,10 @@ header {
 
     .overlayHome {
         position: absolute;
-        top: 0;
+        top: 40vh;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 61vh;
         background: var(--home-ov-bg-color-res);
     }
 }
@@ -363,12 +363,13 @@ header {
     font-size: var(--firma-font-size);
     line-height: 25px;
     hyphens: auto;
+    margin-right: 50px;
 }
 
 
 .logofirma {
-    width: 100%;
-    max-width: 450px;
+    transform: scale(1.5); /* 1.2 es 120% del tamaño original */
+    transform-origin: center bottom; 
 
 }
 
@@ -391,7 +392,9 @@ header {
 @media (max-width: 991px) {
     .logofirma {
         max-width: 300px;
-        margin: 5vh 0px;
+        margin-top: -15vh;
+        transform: scale(1); /* 1.2 es 120% del tamaño original */
+        transform-origin: center bottom; 
     }
 
     .overlayFirma {
@@ -402,6 +405,7 @@ header {
     .backFirma {
         padding: 20px;
         margin: 5vh 0vh 0 0;
+        
     }
 
     .backFirma h1 {
@@ -410,6 +414,7 @@ header {
 
     .backFirma p {
         font-size: var(--tam-small);
+       
     }
 
 }
