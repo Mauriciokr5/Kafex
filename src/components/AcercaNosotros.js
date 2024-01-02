@@ -4,6 +4,7 @@ import image1 from '../images/1AcercaDeNosotros.jpg';
 import image2 from '../images/2AcercaDeNosotros.jpg';
 import image3 from '../images/3AcercaDeNosotros.jpg';
 import { Nav, Container, Row, Col, Carousel } from 'react-bootstrap';
+import Header from './Header';
 
 const AcercaNosotros = () => {
 
@@ -19,7 +20,9 @@ const AcercaNosotros = () => {
             <source src={bannerAcercadeNosotros} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <Header />
           <div className="texto-encima mainTitle">
+            
             <p>ACERCA DE NOSOTROS</p>
           </div>
         </div >

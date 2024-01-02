@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../images/logo.png';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -16,9 +17,10 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" />
                     <Navbar.Collapse id="navbar-nav" className="justify-content-end ">
                         <Nav className="ml-auto navoptions">
-                            <Nav.Link href="#Firma">Acerca de nosotros</Nav.Link>
-                            <Nav.Link href="#Especialidades">Servicios</Nav.Link>
-                            <Nav.Link href="#Contacto">Contacto</Nav.Link>
+                            <Link to="/" className="nav-link">Inicio</Link>
+                            <Link to="/acerca-nosotros" className="nav-link">Acerca de nosotros</Link>
+                            <Link to="/Especialidades" className="nav-link">Servicios</Link>
+                            <Link to="/Contacto" className="nav-link">Contacto</Link>
                         </Nav>
 
                     </Navbar.Collapse>
