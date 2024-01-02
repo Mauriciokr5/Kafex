@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
-import logoCompleto from '../images/logoCompleto.png';
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
@@ -9,7 +8,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col md={5} className="mb-4">
-                        <img src={logoCompleto} alt="Logo" className="footerLogo" ></img>
+                        <img src="" alt="Logo" className="footerLogo" ></img>
                     </Col>
                     <Col lg={4} className="footercontacto">
                         <h5>Contactanos</h5>

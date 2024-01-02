@@ -31,8 +31,8 @@
     --home-font-size: 50px;
     --home-font-color: var(--color3);
     /* --home-ov-bg-color: linear-gradient(rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1)); */
-    --home-ov-bg-color: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1) );
-    --home-ov-bg-color-res: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1) );
+    --home-ov-bg-color: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1));
+    --home-ov-bg-color-res: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1));
 
 
     --firma-font-title: var(--main-font);
@@ -45,7 +45,8 @@
 
     --firma-txt-align: justify;
     --firma-bg-color: none;
-    --firma-ov-bg-color: var(--color3);/*linear-gradient( to right, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%);*/
+    --firma-ov-bg-color: var(--color3);
+    /*linear-gradient( to right, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%);*/
     /* --firma-ov-bg-color-res: linear-gradient( to top, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%); */
     --firma-ov-bg-color-res: var(--color3);
 
@@ -68,7 +69,7 @@
     --esp-card-bg-color: rgba(255, 252, 242, 0.9);
     --esp-bg-color: var(--sec-color);
     /* --esp-ov-bg-color: linear-gradient(rgba(177,141,87, 1),rgba(177,141,87, 0.1), rgba(46,53,50,0.5),rgba(46,53,50,1)); */
-    --esp-ov-bg-color: linear-gradient(rgba(255,252,242, 0), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1));
+    --esp-ov-bg-color: linear-gradient(rgba(255, 252, 242, 0), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1));
     /* --esp-ov-bg-color: linear-gradient( rgba(177,141,87, 1),  rgba(46,53,50,0) 5%); */
 
 
@@ -102,6 +103,7 @@
     --contacto-form-control-placeholder-color: var(--color2);
     --contacto-form-control-color: var(--color2);
     --contacto-form-control-border-color: var(--color2);
+    /* --contacto-form-control-border-color: var(--color2); */
 
     --contacto-bg-color: none;
     --contacto-bg2-color: rgba(255, 252, 242, 0.9);
@@ -109,6 +111,10 @@
     --contacto-ov-bg-color: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
 }
+body {
+    overflow-x: hidden;
+  }
+  
 
 
 /*-----------------------------Header--------------------------*/
@@ -183,7 +189,7 @@ header {
 
 }
 
-.navoptions{
+.navoptions {
     gap: 50px;
     margin-right: 50px;
 }
@@ -206,7 +212,8 @@ header {
     .socialnav {
         display: block;
     }
-    .navoptions{
+
+    .navoptions {
         margin-top: 10px;
         gap: 5px;
         margin-right: 0px;
@@ -279,7 +286,7 @@ header {
     top: 15vh;
     left: 0;
     width: 100%;
-    height: 85vh ;
+    height: 85vh;
     background: var(--home-ov-bg-color);
 
 }
@@ -308,6 +315,7 @@ header {
     background-color: var(--color1);
     border-color: var(--color1);
 }
+
 /* .btnHome:active {
     background-color: var(--color1);
     border-color: var(--color1);
@@ -368,8 +376,10 @@ header {
 
 
 .logofirma {
-    transform: scale(1.5); /* 1.2 es 120% del tamaño original */
-    transform-origin: center bottom; 
+    margin-top: -50vh;
+    transform: scale(1);
+    /* 1.2 es 120% del tamaño original */
+    transform-origin: center bottom;
 
 }
 
@@ -393,8 +403,9 @@ header {
     .logofirma {
         max-width: 300px;
         margin-top: -15vh;
-        transform: scale(1); /* 1.2 es 120% del tamaño original */
-        transform-origin: center bottom; 
+        transform: scale(1);
+        /* 1.2 es 120% del tamaño original */
+        transform-origin: center bottom;
     }
 
     .overlayFirma {
@@ -404,8 +415,7 @@ header {
 
     .backFirma {
         padding: 20px;
-        margin: 5vh 0vh 0 0;
-        
+
     }
 
     .backFirma h1 {
@@ -414,7 +424,8 @@ header {
 
     .backFirma p {
         font-size: var(--tam-small);
-       
+        margin-right: 0px;
+
     }
 
 }
@@ -424,7 +435,7 @@ header {
     .containerText {
         padding: 0px 0px !important;
     }
-    
+
 
 }
 
@@ -585,7 +596,7 @@ header {
 /*-----------------------------Contacto--------------------------*/
 .containerStyleContacto {
     background-color: var(--contacto-bg-color);
-    padding: 100px;
+    margin: 15vh 0vh 10vh 0vh;
 }
 
 .rowStyleContacto {
@@ -634,23 +645,29 @@ header {
 
 .form-control {
     color: var(--contacto-form-control-color);
-
-}
-
-.form-control {
     border-radius: 0px;
     background: none;
-    border-color: var(--contacto-form-control-border-color);
+    border: none; 
+    border-bottom: 1px solid var(--contacto-form-control-border-color); 
+    border-left: 1px solid var(--contacto-form-control-border-color);
 
 }
+
+.containerForm {
+    padding: 15px;
+    background-color: var(--color3);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+    border-radius: 10px; /* Adjust radius as needed */
+}
+
 
 
 
 .btnContacto {
-    background-color: var(--color1);
+    background-color: var(--color2);
     border-color: var(--color2);
     margin-top: 20px;
-    border-radius: 0px;
+    border-radius: 10px;
     padding: 7px 15px;
     float: right;
     color: var(--color3);
@@ -658,9 +675,11 @@ header {
 }
 
 .btnContacto:hover {
-    background-color: var(--color2);
-    border-color: var(--color1);
+    background-color: var(--color3);
+    border-color: var(--color2);
+    color: var(--color2);
 }
+
 .btnContacto:hover:active {
     background-color: var(--color2);
     border-color: var(--color1);
@@ -690,6 +709,10 @@ header {
 
     .backContacto p {
         font-size: var(--tam-small);
+    }
+
+    .containerForm {
+        margin-top: 10vh;
     }
 }
 
@@ -777,79 +800,116 @@ header {
 
 /*----------------------------- Acerca de nosotros --------------------------*/
 .acerca-nosotros .pro-sidebar {
-    background: #F2F2F2; 
-    border-radius: 10px; 
-    margin-top: 20px; 
+    background: #F2F2F2;
+    border-radius: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    width: 300px; 
-    padding: 20px; 
-    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
-  }
-  
-.acerca-nosotros .pro-sidebar .menu-item {
-    color: #000; 
-    background-color: #D9D9D9; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    margin-bottom: 5px; 
-    border: 1px solid #D9D9D9;
-    display: block; 
-    transition: background-color 0.3s; 
-    font-size: 16px; 
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-  
-  .acerca-nosotros .pro-sidebar .menu-item-active {
-    background-color: #FF0000 !important; 
-    color: #FFF; 
-    border: 1px solid #FF0000 !important; 
-  }
 
-  .sidebar-carousel .carousel-item {
-    height: 1000px; 
-  }
+.acerca-nosotros .pro-sidebar .menu-item {
+    color: #000;
+    background-color: #D9D9D9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: 1px solid #D9D9D9;
+    display: block;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
 
-  .sidebar-carousel .carousel-item img {
+.acerca-nosotros .pro-sidebar .menu-item-active {
+    background-color: #FF0000 !important;
+    color: #FFF;
+    border: 1px solid #FF0000 !important;
+}
+
+.sidebar-carousel .carousel-item {
+    height: 1000px;
+}
+
+.sidebar-carousel .carousel-item img {
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     width: 100%;
     border-radius: 5px;
-  }
-  
-  .texto-boton {
-    color: black; 
-  }
+}
 
-  .texto-encima {
+.texto-boton {
+    color: black;
+}
+
+.texto-encima {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; 
+    color: white;
     text-align: center;
-    z-index: 2; 
-  }
+    z-index: 2;
+}
 
-  .content {
+.content {
     display: flex;
-  }
-  
-  .main-content {
+}
+
+.main-content {
     flex: 3;
     padding: 20px;
-  }
-  
-  .main-content section {
+}
+
+.main-content section {
     margin-bottom: 40px;
-  }
-  
-  .main-content h2 {
+}
+
+.main-content h2 {
     color: black;
     padding: 10px;
-  }
-  
-  .main-content p {
+}
+
+.main-content p {
     text-align: justify;
     padding: 10px;
-    background-color: #f9f9f9; 
-  }
+    background-color: #f9f9f9;
+}
+
+
+/*----------------------------- Carousel Inicio --------------------------*/
+.caption-left {
+    text-align: left;
+    right: auto;
+    left: 15%;
+    margin-bottom: 15vh;
+    
+}
+.caption-left h3{
+    right: auto;
+    background-color: rgba(214,41,42,0.8);
+    padding: 5vh;
+}
+
+.standard-image {
+    object-fit: cover; 
+    width: 100%; 
+    height: 70vh; 
+}
+
+@media (max-width: 991px) {
+    .caption-left {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        right: auto;
+        margin-bottom: auto;
+    }
+
+    
+    
+    
+}

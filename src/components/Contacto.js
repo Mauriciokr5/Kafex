@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Toast } from 'react-bootstrap';
-import garperfirma from '../images/garperfirma.jpg';
+import { IoIosPin } from "react-icons/io";
+import { IoIosMail } from "react-icons/io";
+
 import axios from 'axios';
 
 const Contacto = () => {
-    const [nombre, setNombre] = useState('');
-    const [correo, setCorreo] = useState('');
-    const [telefono, setTelefono] = useState('');
-    const [mensaje, setMensaje] = useState('');
+    const [formData, setFormData] = useState({
+        nombre: '',
+        apellido: '',
+        correo: '',
+        telefono: '',
+        mensaje: '',
+    });
 
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
@@ -22,7 +27,7 @@ const Contacto = () => {
 
         try {
             await axios.post(url);
-            
+
             handleCloseWithAnimation();
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
@@ -37,12 +42,19 @@ const Contacto = () => {
         setMensaje('');
     };
 
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
     const handleCloseAlert = () => {
         setShowAlert(false);
     };
 
     const containerStyle = {
-        backgroundImage: `url(${garperfirma})`,
+        backgroundImage: `url()`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
@@ -52,76 +64,58 @@ const Contacto = () => {
 
     return (
         <div style={containerStyle} className='containerStyleContacto' id='Contacto'>
+
             <Container>
-                <Row className='rowStyleContacto'>
-                    <Col md={6} className='backContacto'>
-                        <div >
-                            <h1>Contacto</h1>
-                            <p>Tel: <a className="cont" href="tel:+525545025100" >+525545025100</a></p>
-                            <p>Email: <a className="cont" href="mailto:contacto.garper@gmail.com" >contacto.garper@gmail.com</a></p>
-                        </div>
+                <Row>
 
-                        {/* <div style={{ position: 'relative', width: '100%', paddingTop: '50%' }}>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.9153723849391!2d-99.2323235242238!3d19.383804761036043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201ab038aed8d%3A0x93116e55ccf6fc62!2sPaso%20De%20La%20Laja%202%2C%20La%20Mexicana%2C%20%C3%81lvaro%20Obreg%C3%B3n%2C%20%C3%81lvaro%20Obreg%C3%B3n%2C%2001260%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1691266179601!5m2!1ses-419!2smx"
-                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: '0' }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                        </div> */}
+                    <Col lg={{ span: 4, offset: 1 }}>
+                        <h2>Obtén una cotización adecuada a sus necesidades</h2>
+                        <br></br>
+                        <p>
+                            <IoIosPin /> &nbsp;&nbsp;&nbsp;Plazuela 1 de plaza del Carmen, manzana 29, lote 14, plazas de Aragón.
+                        </p>
+                        <br></br>
+                        <IoIosMail />
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="mailto:operaciones@corporativofax.com.mx">
+                            operaciones@corporativofax.com.mx
+                        </a>
+
                     </Col>
-                    <Col md={{ span: 6, offset: 0 }} className='backForm'>
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group controlId="nombre">
-                                <Form.Label>Nombre</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Ingrese su nombre"
-                                    value={nombre}
-                                    onChange={(e) => setNombre(e.target.value)}
-                                    required
-                                />
-                            </Form.Group>
+                    <Col lg={{ span: 5, offset: 1 }} className="containerForm">
+                        <br></br>
+                        
+                            <form onSubmit={handleSubmit}>
+                                <div className="row mb-3">
+                                    <div className="col">
+                                        <label htmlFor="nombre">Nombre</label>
+                                        <input type="text" className="form-control" name="nombre" id="nombre" value={formData.nombre} onChange={handleChange} required />
+                                    </div>
+                                    <div className="col">
+                                        <label htmlFor="apellido">Apellido</label>
+                                        <input type="text" className="form-control" name="apellido" id="apellido" value={formData.apellido} onChange={handleChange} required />
+                                    </div>
+                                </div>
+                                <div className="row mb-3">
+                                    <div className="col">
+                                        <label htmlFor="correo">Correo</label>
+                                        <input type="email" className="form-control" name="correo" id="correo" value={formData.correo} onChange={handleChange} required />
+                                    </div>
+                                    <div className="col">
+                                        <label htmlFor="telefono">Teléfono</label>
+                                        <input type="tel" className="form-control" name="telefono" id="telefono" value={formData.telefono} onChange={handleChange} required />
+                                    </div>
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="mensaje">Mensaje</label>
+                                    <textarea className="form-control" name="mensaje" id="mensaje" value={formData.mensaje} onChange={handleChange} required rows="3"></textarea>
+                                </div>
+                                <div className="">
+                                    <button type="submit" className="btn btn-primary btnContacto">Enviar</button>
+                                </div>
+                            </form>
 
-                            <Form.Group controlId="correo">
-                                <Form.Label>Correo Electrónico</Form.Label>
-                                <Form.Control
-                                    type="email"
-                                    placeholder="Ingrese su correo electrónico"
-                                    value={correo}
-                                    onChange={(e) => setCorreo(e.target.value)}
-                                    required
-                                />
-                            </Form.Group>
-
-                            <Form.Group controlId="telefono">
-                                <Form.Label>Teléfono</Form.Label>
-                                <Form.Control
-                                    type="tel"
-                                    placeholder="Ingrese su teléfono"
-                                    value={telefono}
-                                    onChange={(e) => setTelefono(e.target.value)}
-                                    required
-                                />
-                            </Form.Group>
-
-                            <Form.Group controlId="mensaje">
-                                <Form.Label>Mensaje</Form.Label>
-                                <Form.Control
-                                    as="textarea"
-                                    rows={4}
-                                    placeholder="Escriba su mensaje"
-                                    value={mensaje}
-                                    onChange={(e) => setMensaje(e.target.value)}
-                                    required
-                                />
-                            </Form.Group>
-
-                            <Button type="submit" className='btnContacto'>
-                                Enviar
-                            </Button>
-                        </Form>
+                        
                     </Col>
                 </Row>
             </Container>

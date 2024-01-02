@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Row, Col, Button } from 'react-bootstrap';
 
-import logoCompleto from '../images/logoCompleto.png';
 
 const Home = () => {
     // const containerStyle = {

@@ -6,15 +6,11 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
-import Popup from './Popup'; // Import the Popup component
 import Inicio from './Inicio';
 import Objetivo from './Objetivo';
-import Especialidades from './Especialidades';
 import Contacto from './Contacto';
 import Footer from './Footer';
-import Clientes from './Clientes';
 import AcercaNosotros from './AcercaNosotros';
-import garperhome from '../images/garperhome.jpg';
 import carreteraVideo from '../images/carreteraVideo.mp4';
 
 import { FaWhatsapp } from 'react-icons/fa';
