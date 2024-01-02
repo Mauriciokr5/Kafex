@@ -3,6 +3,9 @@ import bannerAcercadeNosotros from '../images/BannerAcercadeNosotros.mp4';
 import image1 from '../images/1AcercaDeNosotros.jpg';
 import image2 from '../images/2AcercaDeNosotros.jpg';
 import image3 from '../images/3AcercaDeNosotros.jpg';
+import image4 from '../images/TrailerNegroPNG.png';
+import image5 from '../images/ImgDerechaAcercaDeNostros.jpg';
+import organigrama from '../images/organigrama.png';  
 import { Nav, Container, Row, Col, Carousel } from 'react-bootstrap';
 import Header from './Header';
 
@@ -77,21 +80,30 @@ const AcercaNosotros = () => {
 
                 <Col lg={9}>
                     <div className="main-content">
-                        <section id="quienes-somos">
-                        <h2>¿Quiénes somos?</h2>
-                        <p>
-                        Corporativo Kafex, es una Empresa dedicada en brindar un servicio de Transportación y Logística Marítima Terrestre, y aérea ofreciéndole un servicio Integral logístico de su mercancía en trayecto, a nivel
-                        Nacional e Internacional, formando parte de un grupo corporativo de empresas exitosas en su ramo. Las rutas que en la actualidad manejamos son las siguientes: Estados Unidos, Canadá, Centro y Sudamérica. (Como Servicio Terrestre)
-                        La empresa se creó el 19 de noviembre del 2019, realizando mas de 10 mil viajes en todo lo que lleva de su existencia
-                        </p>
+                        <section id="quienes-somos" className="quienes-somos-section">
+                          <div className="quienes-somos-content">
+                            <div>
+                              <h2 className="quienes-somos-title">¿Quiénes somos?</h2>
+                              <p className="quienes-somos-text">
+                                Corporativo Kafex, es una Empresa dedicada en brindar un servicio de Transportación y Logística Marítima Terrestre, y aérea ofreciéndole un servicio Integral logístico de su mercancía en trayecto, a nivel
+                                Nacional e Internacional, formando parte de un grupo corporativo 
+                                de empresas exitosas en su ramo. Las rutas que en la actualidad manejamos son las siguientes: Estados Unidos, Canadá, Centro y Sudamérica. (Como <br></br> Servicio Terrestre)
+                                <br></br>
+                                La empresa se creó el 19 de noviembre del 2019, realizando más de <br></br> 10 mil viajes en todo lo que lleva de su existencia.
+                              </p>
+                            </div>
+                            <Col lg={{ span: 5, offset: 2 }} className="order-lg-2 d-flex align-items-center justify-content-center ">
+                            <img src={image4} alt="Transporte" className="quienes-somos-image" />
+                            </Col>
+                          </div>
                         </section>
-                        <section id="mision">
+                        <section id="mision" className='mision'>
                         <h2>Misión</h2>
                         <p>
                         Corporativo Kafex fue creada con la finalidad de ofrecer a todos nuestros clientes un servicio integral en el comercio interior y exterior, teniendo como objetivo principal, que nuestros clientes siempre salgan beneficiados tanto competitividad de nuestras tarifas, como con la eficiencia de nuestros servicios. 
                         </p>
                         </section>
-                        <section id="vision">
+                        <section id="vision" className='vision'>
                         <h2>Visión</h2>
                         <p>
                         Ser una empresa líder en nuestro ámbito por la calidad, compromiso y seguridad de nuestros servicios, con una presencia dominante en el mercado, cumpliendo con las normas y estándares aplicables, trascendiendo con la mejor solución en el sector laboral que nos desenvolvemos, como resultado de la satisfacción y confianza de nuestros clientes, generada por la presentación de nuestros servicios.
@@ -104,22 +116,32 @@ const AcercaNosotros = () => {
                         La calidad de nuestros servicios es el resultado del compromiso, integridad y seguridad con la que trabajamos. 
                         </p>
                         </section>
-                        <section id="principios">
-                        <h2>Principios</h2>
-                        <p>
-                        Politica de Calidad
-                        Somos un equipo de trabajo cuyas acciones diarias las ejecutamos con una elevada vocación de servicio a los clientes en nuestra visión de empresa de categoría mundial, basadas en los siguientes principios. 
-
-                        Integridad Personal como expresión de disciplina, orden, respeto, honestidad y entusiasmo. 
-                        Creatividad e Innovación como parte de nuestro reto diario para el mejoramiento continuo. 
-                        Productividad en nuestro trabajo y en el empleo de los recursos materiales. 
-                        Conciencia en la práctica de un trabajo libre de errores y en el Compromiso leal con la institución y con las realizaciones de calidad. 
-                        </p>
+                        <div className='principios-container'>
+                        <section id="principios" className='principios-section'>
+                        <Row>
+                          <Col lg={9} className='principios-text-column'>
+                            <h2 className='principios-title'>Principios</h2>
+                            <p className='principios-text'>
+                            <strong>Política de Calidad</strong><br /><br />
+                            Somos un equipo de trabajo cuyas <strong>acciones diarias</strong> las ejecutamos con una elevada vocación de servicio a los clientes en nuestra visión de empresa de categoría mundial, basadas en los siguientes principios.<br /><br />
+                            <ol>
+                              <li><strong>Integridad Personal</strong> como expresión de disciplina, orden, respeto, honestidad y entusiasmo.</li>
+                              <li><strong>Creatividad e Innovación</strong> como parte de nuestro reto diario para el mejoramiento continuo.</li>
+                              <li><strong>Productividad</strong> en nuestro trabajo y en el empleo de los recursos materiales.</li>
+                              <li><strong>Conciencia</strong> en la práctica de un trabajo libre de errores y en el <strong>Compromiso</strong> leal con la institución y con las realizaciones de calidad.</li>
+                            </ol>
+                            </p>
+                          </Col>
+                          <Col lg={3} className="d-flex align-items-center justify-content-center">
+                            <img src={image5} alt="Principios" className="principios-image" />
+                          </Col>
+                        </Row>
                         </section>
+                        </div>
                         <section id="organigrama">
                         <h2>Organigrama</h2>
                         <p>
-                        <img src="https://i.ibb.co/1b7j3f6/organigrama.png" alt="Organigrama" border="0"></img>
+                        <img src={organigrama} alt="Organigrama" border="0"></img>
                         </p>
                         </section>
                     </div>
@@ -130,5 +152,6 @@ const AcercaNosotros = () => {
       
     );
   }
+  
   
   export default AcercaNosotros;

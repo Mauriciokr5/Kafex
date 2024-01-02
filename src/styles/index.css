@@ -809,6 +809,19 @@ header {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+.pro-sidebar {
+    position: sticky;
+    top: 0; 
+    height: 100vh; 
+    overflow-y: auto; 
+}
+
+@media (max-width: 1400px) {
+    .pro-sidebar {
+        display: none; 
+    }
+}
+
 .acerca-nosotros .pro-sidebar .menu-item {
     color: #000;
     background-color: #D9D9D9;
@@ -829,7 +842,7 @@ header {
 }
 
 .sidebar-carousel .carousel-item {
-    height: 1000px;
+    height: 310px;
 }
 
 .sidebar-carousel .carousel-item img {
@@ -860,6 +873,8 @@ header {
 .main-content {
     flex: 3;
     padding: 20px;
+    position: relative; 
+    overflow: hidden; 
 }
 
 .main-content section {
@@ -874,10 +889,206 @@ header {
 .main-content p {
     text-align: justify;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
+.quienes-somos-section {
+    background-color: white;
+    font-family: 'Calibri Light';
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    position: relative; 
+}
 
+.quienes-somos-content {
+    width: 68%; 
+    padding-right: 20px; 
+}
+  
+  .quienes-somos-title {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  .quienes-somos-title::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    height: 2px;
+    background-color: red;
+    width: calc(300%); 
+    transform: translateY(-50%);
+  }
+  
+  .quienes-somos-text {
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    text-size-adjust: 100%;
+    font-size: 1.2em;
+  }
+  
+  .quienes-somos-image {
+    width: 52vw; 
+    height: auto; 
+    position: absolute; 
+    right: -24vw; 
+    top: 0; 
+    bottom: 0; 
+    transition: all 0.3s ease; 
+  }
+  
+  @media (max-width: 1000px) {
+    .quienes-somos-image {
+      width: 100%; 
+      position: relative; 
+      right: 0; 
+      top: auto; 
+      bottom: auto; 
+      order: 2; 
+    }
+  
+    .quienes-somos-section {
+      flex-direction: column; 
+    }
+  }
+
+.mision {
+    background-color: #D6292A; 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin: 20px 0; 
+    font-family: 'Calibri Light';
+}
+
+.mision h2 {
+    margin-top: 0; 
+    color: white;
+    font-weight: bold;
+    
+}
+
+.mision p {
+    color: white;
+    background-color: #D6292A;
+    font-size: 1.2em;
+}
+
+.vision {
+    background-color: #E64F4F; 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin: 20px 0; 
+    font-family: 'Calibri Light';
+}
+
+.vision h2 {
+    margin-top: 0;
+    text-align: end;
+    color: white;
+    font-weight: bold;
+}
+
+.vision p {
+    color: white;
+    background-color: #E64F4F;
+    font-size: 1.2em;
+}
+
+#valores h2 {
+    font-family: 'Calibri Light';
+    font-weight: bold;
+}
+
+#valores p{
+    font-family: 'Calibri Light';
+    font-size: 1.2em;
+}
+
+.principios-section {
+    background-color: white;
+    font-family: 'Calibri Light';
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    position: relative; 
+    margin-bottom: 40px; 
+}
+
+.principios-title {
+    position: relative;
+    width: 100%; 
+    margin-bottom: 10px; 
+    margin-right: 20px;
+    margin-left: -70px; 
+    font-family: 'Calibri Light';
+    font-weight: bold;
+    text-align: end ;
+}
+
+.principios-title::before {
+    position: absolute;
+    content: '';
+    left: 0; 
+    top: 50%;
+    height: 2px;
+    background-color: red;
+    width: 75%; 
+    transform: translateY(-50%);
+}
+
+.principios-text {
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    text-size-adjust: 100%;
+    font-size: 1.2em;
+    width: 90%; 
+    font-family: 'Calibri Light';
+  }
+  
+.principios-image {
+    margin-top: 10px; 
+    width: 28vw;
+    height: 100%;
+    position: absolute;
+    right: -10vw;
+    top: 0;
+    bottom: 0;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+  
+  @media (max-width: 1000px) {
+    .principios-image {
+      width: 100%; 
+      position: relative; 
+      right: 0; 
+      top: auto; 
+      bottom: auto; 
+      order: 2; 
+    }
+  
+    .principios-section {
+      flex-direction: column; 
+    }
+  }
+
+#organigrama {
+    font-family: 'Calibri Light';
+}
+#organigrama h2{
+    font-weight: bold;
+}
+#organigrama img{
+    width: 100%;
+    height: auto;
+}
+  
 /*----------------------------- Carousel Inicio --------------------------*/
 .caption-left {
     text-align: left;
