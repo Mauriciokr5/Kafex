@@ -774,3 +774,82 @@ header {
     font-weight: bold;
     color: inherit;
 }
+
+/*----------------------------- Acerca de nosotros --------------------------*/
+.acerca-nosotros .pro-sidebar {
+    background: #F2F2F2; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    width: 300px; 
+    padding: 20px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+  }
+  
+.acerca-nosotros .pro-sidebar .menu-item {
+    color: #000; 
+    background-color: #D9D9D9; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-bottom: 5px; 
+    border: 1px solid #D9D9D9;
+    display: block; 
+    transition: background-color 0.3s; 
+    font-size: 16px; 
+}
+  
+  .acerca-nosotros .pro-sidebar .menu-item-active {
+    background-color: #FF0000 !important; 
+    color: #FFF; 
+    border: 1px solid #FF0000 !important; 
+  }
+
+  .sidebar-carousel .carousel-item {
+    height: 1000px; 
+  }
+
+  .sidebar-carousel .carousel-item img {
+    height: 100%;
+    object-fit: cover; 
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .texto-boton {
+    color: black; 
+  }
+
+  .texto-encima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-align: center;
+    z-index: 2; 
+  }
+
+  .content {
+    display: flex;
+  }
+  
+  .main-content {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  .main-content section {
+    margin-bottom: 40px;
+  }
+  
+  .main-content h2 {
+    color: black;
+    padding: 10px;
+  }
+  
+  .main-content p {
+    text-align: justify;
+    padding: 10px;
+    background-color: #f9f9f9; 
+  }

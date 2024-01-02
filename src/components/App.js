@@ -16,6 +16,7 @@ import Especialidades from './Especialidades';
 import Contacto from './Contacto';
 import Footer from './Footer';
 import Clientes from './Clientes';
+import AcercaNosotros from './AcercaNosotros';
 import garperhome from '../images/garperhome.jpg'
 import carreteraVideo from '../images/carreteraVideo.mp4'
 
@@ -47,9 +48,10 @@ function App() {
         </div>
       </div>
       <Objetivo />
-      <Especialidades />
-      <Clientes />
+      { /*<Especialidades />
+      <Clientes /> */}
       <Contacto />
+      <AcercaNosotros />
       <Footer />
 
       {/* {showPopup && <Popup onClose={handleClosePopup} />} */}
