@@ -720,14 +720,14 @@ header {
 /*-----------------------------Footer--------------------------*/
 
 .text-golden {
-    color: #c6c2bd;
+    color: white;
     margin-right: 10px;
 }
 
 .footerLogo {
-    width: 30%;
+    width: 10%;
     height: auto;
-    min-width: 280px;
+    min-width: 140px;
 }
 
 .footerSocialMediaNav {
@@ -753,12 +753,12 @@ header {
 
 .leyendaDerechos {
     text-align: right;
-    color: #c6c2bd;
+    color: white;
 }
 
 .footerStyle {
-    color: #c6c2bd !important;
-    background-color: #000 !important;
+    color: white !important;
+    background-color: #D6292A !important;
 }
 
 
