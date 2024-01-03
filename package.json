@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "npx webpack serve --mode development"
+    "start": "npx webpack serve --mode development",
+    "csspurge": "npx purgecss --css ./src/styles/index.css --content ./src/public/index.html ./src/components/*.js ./node_modules/bootstrap/dist/css/bootstrap.min.css --output ./src/public/"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "bootstrap-icons": "^1.11.2",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
+    "purgecss": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",

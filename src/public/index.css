@@ -53,6 +53,41 @@
 
 
 
+    --esp-font-title: var(--main-font);
+    --esp-font-title-size: var(--tam-big);
+    --esp-font-title-color: var(--color3);
+
+    --esp-font-subt: var(--main-font);
+    --esp-font-subt-size: var(--tam-reg);
+    --esp-font-subt-color: var(--color1);
+
+    --esp-font: var(--sec-font);
+    --esp-font-size: var(--tam-small);
+    --esp-font-color: var(--color2);
+
+    --esp-txt-align: justify;
+    --esp-card-bg-color: rgba(255, 252, 242, 0.9);
+    --esp-bg-color: var(--sec-color);
+    /* --esp-ov-bg-color: linear-gradient(rgba(177,141,87, 1),rgba(177,141,87, 0.1), rgba(46,53,50,0.5),rgba(46,53,50,1)); */
+    --esp-ov-bg-color: linear-gradient(rgba(255, 252, 242, 0), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1));
+    /* --esp-ov-bg-color: linear-gradient( rgba(177,141,87, 1),  rgba(46,53,50,0) 5%); */
+
+
+
+    --clientes-font-title: var(--main-font);
+    --clientes-font-title-size: var(--tam-big);
+    --clientes-font-title-color: var(--color1);
+
+    --clientes-font: var(--sec-font);
+    --clientes-font-size: var(--tam-reg);
+    --clientes-font-color: var(--color3);
+
+    --clientes-txt-align: center;
+    --clientes-bg-color: none;
+    --clientes-ov-bg-color: linear-gradient(rgba(46, 53, 50, 1), rgba(46, 53, 50, 1));
+
+
+
     --contacto-font-title: var(--main-font);
     --contacto-font-title-size: var(--tam-big);
     --contacto-font-title-color: var(--color1);
@@ -321,6 +356,57 @@ header {
 
 
 }
+
+
+/*-----------------------------Especialidades--------------------------*/
+
+.card-title {
+    font-family: var(--esp-font-subt);
+    font-size: var(--esp-font-subt-size);
+    color: var(--esp-font-subt-color);
+}
+
+.card-img-top {
+    padding: 20px;
+    max-height: 130px;
+    width: auto;
+}
+
+.card {
+    border: none;
+    background-color: var(--esp-card-bg-color);
+    border-radius: 10px !important;
+    min-height: auto;
+    max-height: 50vh;
+    width: 280px;
+
+}
+
+.card-text {
+    font-size: var(--esp-font-size);
+    font-family: var(--esp-font);
+    color: var(--esp-font-color);
+    margin-bottom: 10px;
+    word-spacing: 1px;
+}
+
+.card-body {
+    margin-bottom: 10px;
+}
+
+
+/* .especialidadesSec{
+    background-image: linear-gradient(to bottom, #b18d57, #7b623c ) !important;
+
+    padding: 20px 0px 20px 0px;
+} */
+
+/*-----------------------------Clientes--------------------------*/
+
+/* .clienteslogos img{
+    filter: hue-rotate(120deg) brightness(51.8%) saturate(36.6%);
+    filter: sepia(100%);
+} */
 
 
 /*-----------------------------Contacto--------------------------*/

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router, // Changed BrowserRouter to HashRouter
   Routes,
   Route,
   Link,
@@ -30,11 +30,10 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router> {/* Here, Router is now HashRouter */}
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/acerca-nosotros" element={<AcercaNosotros />} />
-          {/* Add other routes here as needed */}
         </Routes>
       </Router>
       <Footer />

@@ -11,10 +11,10 @@ const Footer = () => {
         <footer className="bg-dark text-light py-4 footerStyle">
             <Container>
                 <Row>
-                    <Col md={5} className="mb-4">
+                    <Col md={4} className="mb-4">
                         <img src={logo} alt="Logo" className="footerLogo" ></img>
                     </Col>
-                    <Col lg={4} className="footercontacto">
+                    <Col lg={5} className="footercontacto">
                         <h5>Contactanos</h5>
                         <p><FaEnvelope size={30} className="mr-3 text-golden" /> 
                         <a className="cont" href="mailto:corporativo@corporativokafex.com.mx">corporativo@corporativokafex.com.mx</a>
@@ -27,7 +27,7 @@ const Footer = () => {
                         
                     </Col>
                     <hr className='hidehrfooter'></hr>
-                    <Col lg={{ span: 2, offset: 1 }} className='footerSocialMediaNav'>
+                    <Col lg={{ span: 3, offset: 0 }} className='footerSocialMediaNav'>
                         <div className="footernav">
                         <p><FaMapMarkerAlt size={30} className="mr-3 text-golden" /> 
                         Plazuela 1 de Plaza del Carmen, Manzana 29, Lote 14, Plazas de Aragón

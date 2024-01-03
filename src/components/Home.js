@@ -3,19 +3,23 @@ import { Navbar, Nav, Container, Row, Col, Button } from 'react-bootstrap';
 
 
 const Home = () => {
-    // const containerStyle = {
-    //     backgroundImage: `url(${garperhome})`
-    // };
+
+    const scrollTo = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+      
 
     return (
-        
             <div className="overlayHome d-flex align-items-center">
                 <Container>
-                    {/* <img className="mainLogo" src={logoCompleto} alt="Logo" ></img> */}
                     <Row>
                         <Col lg={6}>
-                            <h1 className='mainTitle'>EL SERVICIO DE TRASNPORTACIÓN PARA TI​</h1>
-                            <Button href='#Contacto' className='btnHome'>Cotizar</Button>
+                            <h1 className='mainTitle'>EL SERVICIO DE TRASNPORTACIÓN PARA TI</h1>
+                            <Button onClick={() => scrollTo('Contacto')} className='btnHome'>Cotizar</Button>
+
                         </Col>
                     </Row>
 

@@ -25,10 +25,10 @@ const Objetivo = () => {
                         <Col lg={{ span: 5, offset: 2 }} className="order-lg-2 d-flex align-items-center justify-content-center ">
                             <img className="logofirma" src={camion} alt="Logo" ></img>
                         </Col>
-                        <Col lg={5} className='order-lg-1 containerText'>
+                        <Col lg={5} className='order-lg-1 d-flex align-items-end containerText'>
                             <div className='backFirma'>
                                 <p>
-                                    Dedicados en brindar un servicio de Transportación y Logística formando parte de un grupo corporativo de empresas exitosas en su ramo. ​
+                                    Dedicados en brindar un servicio de <strong>Transportación</strong> y <strong>Logística</strong> formando parte de un grupo corporativo de empresas exitosas en su ramo. ​
                                 </p>
                             </div>
 
