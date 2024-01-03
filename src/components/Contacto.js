@@ -74,7 +74,6 @@ const Contacto = () => {
                         <p>
                             <IoIosPin /> &nbsp;&nbsp;&nbsp;Plazuela 1 de plaza del Carmen, manzana 29, lote 14, plazas de Aragón.
                         </p>
-                        <br></br>
                         <IoIosMail />
                         &nbsp;&nbsp;&nbsp;
                         <a href="mailto:operaciones@corporativofax.com.mx">

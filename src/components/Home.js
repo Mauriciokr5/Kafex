@@ -13,12 +13,12 @@ const Home = () => {
       
 
     return (
-            <div className="overlayHome d-flex align-items-center">
-                <Container>
+            <div className="home-background-overlay d-flex align-items-center">
+                <Container className=''>
                     <Row>
                         <Col lg={6}>
-                            <h1 className='mainTitle'>EL SERVICIO DE TRASNPORTACIÓN PARA TI</h1>
-                            <Button onClick={() => scrollTo('Contacto')} className='btnHome'>Cotizar</Button>
+                            <h1 className='header-combinado-main-title'>EL SERVICIO DE TRASNPORTACIÓN PARA TI</h1>
+                            <Button onClick={() => scrollTo('Contacto')} className='home-btn'>Cotizar</Button>
 
                         </Col>
                     </Row>

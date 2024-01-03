@@ -25,13 +25,13 @@ const AcercaNosotros = () => {
 
   return (
     <div className="acerca-nosotros">
-      <div className='containerStyleHome'>
-        <video autoPlay loop muted style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }}>
+      <div className='header-combinado-container'>
+        <video autoPlay loop muted className='header-combinado-video'>
           <source src={bannerAcercadeNosotros} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <Header />
-        <div className="texto-encima mainTitle">
+        <div className="texto-encima header-combinado-main-title">
 
           <p>ACERCA DE NOSOTROS</p>
         </div>

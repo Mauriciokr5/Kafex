@@ -11,80 +11,61 @@
     /**/
 
     --main-font: "Calibri", sans-serif;
-
     --sec-font: 'Lato', sans-serif;
 
     --tam-small: 17px;
     --tam-reg: 22px;
     --tam-big: 33px;
 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*-----------------------------Header Combinado--------------------------*/
+
+.header-combinado-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: relative;
+    height: 100vh;
+}
+
+.header-combinado-video {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-combinado-main-title {
+    font-size: var(--home-font-size);
+    color: var(--home-font-color);
+    margin-top: 20px;
+    font-family: var(--home-font);
+}
+
+
+
+@media (max-width: 991px) {
+    .header-combinado-main-title {
+        font-size: 33px;
+        margin: 0 6vw;
+    }
+}
+
+/*-----------------------------Header--------------------------*/
+:root {
     --nav-font: var(--main-font);
     --nav-font-size: var(--tam-reg);
     --nav-font-color: var(--color3);
     --nav-bg-color: var(--color2);
-
-
-    --popup-bg-color: var(--color2);
-
-
-    --home-font: var(--main-font);
-    --home-font-size: 50px;
-    --home-font-color: var(--color3);
-    /* --home-ov-bg-color: linear-gradient(rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1)); */
-    --home-ov-bg-color: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1));
-    --home-ov-bg-color-res: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1));
-
-
-    --firma-font-title: var(--main-font);
-    --firma-font-title-size: var(--tam-big);
-    --firma-font-title-color: var(--color1);
-
-    --firma-font: var(--sec-font);
-    --firma-font-size: var(--tam-reg);
-    --firma-font-color: black;
-
-    --firma-txt-align: justify;
-    --firma-bg-color: none;
-    --firma-ov-bg-color: var(--color3);
-    /*linear-gradient( to right, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%);*/
-    /* --firma-ov-bg-color-res: linear-gradient( to top, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%); */
-    --firma-ov-bg-color-res: var(--color3);
-
-
-
-
-    --contacto-font-title: var(--main-font);
-    --contacto-font-title-size: var(--tam-big);
-    --contacto-font-title-color: var(--color1);
-
-    --contacto-font: var(--sec-font);
-    --contacto-font-size: var(--tam-reg);
-    --contacto-font-color: var(--color2);
-
-    --contacto-font-label: var(--sec-font);
-    --contacto-font-label-size: var(--tam-reg);
-    --contacto-font-label-color: var(--color2);
-
-    --contacto-form-control-placeholder-color: var(--color2);
-    --contacto-form-control-color: var(--color2);
-    --contacto-form-control-border-color: var(--color2);
-    /* --contacto-form-control-border-color: var(--color2); */
-
-    --contacto-bg-color: none;
-    --contacto-bg2-color: rgba(255, 252, 242, 0.9);
-    /* --contacto-bg2-color: rgba(255,255,255,0.9); */
-    --contacto-ov-bg-color: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-
 }
-body {
-    overflow-x: hidden;
-  }
-  
 
-
-/*-----------------------------Header--------------------------*/
 nav {
-
     flex: 1 1 auto;
 }
 
@@ -127,46 +108,41 @@ header {
     border-radius: 50px;
     padding: 40px 0px 20px 0px;
     margin-top: -30px;
-
+    position: sticky;
+    z-index: 1;
 }
 
-.navoptions {
+.nav-options {
     gap: 50px;
     margin-right: 50px;
 }
 
 @media (max-width: 991px) {
 
-    .navoptions {
+    .nav-options {
         margin-top: 10px;
         gap: 5px;
         margin-right: 0px;
     }
 }
 
-/*-----------------------------Popup--------------------------*/
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 
 /*-----------------------------Home--------------------------*/
 
-.mainTitle {
-    font-size: var(--home-font-size);
-    color: var(--home-font-color);
-    margin-top: 20px;
-    font-family: var(--home-font);
+:root {
+    --home-font: var(--main-font);
+    --home-font-size: 50px;
+    --home-font-color: var(--color3);
+    /* --home-ov-bg-color: linear-gradient(rgba(46, 53, 50, 0.5), rgba(46, 53, 50, 1)); */
+    --home-ov-bg-color: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1));
+    --home-ov-bg-color-res: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255, 1));
 }
 
-.overlayHome {
+
+
+
+.home-background-overlay {
     position: absolute;
     top: 15vh;
     left: 0;
@@ -177,15 +153,7 @@ header {
 }
 
 
-.containerStyleHome {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center;
-    position: relative;
-    height: 100vh;
-}
-
-.btnHome {
+.home-btn {
     background-color: var(--color2);
     border-color: var(--color1);
     margin-top: 20px;
@@ -196,32 +164,25 @@ header {
     font-family: var(--sec-font);
 }
 
-.btnHome:hover {
+.home-btn:hover {
     background-color: var(--color1);
     border-color: var(--color1);
 }
 
-/* .btnHome:active {
-    background-color: var(--color1);
-    border-color: var(--color1);
-} */
-.btnHome:hover:active {
+
+.home-btn:hover:active {
     background-color: var(--color1);
     border-color: var(--color1);
 }
 
 
 @media (max-width: 991px) {
-    .mainTitle {
-        font-size: 33px;
-        margin: 0 6vw;
-    }
 
-    .btnHome {
+    .home-btn {
         margin: 10vw 6vw;
     }
 
-    .overlayHome {
+    .home-background-overlay {
         position: absolute;
         top: 40vh;
         left: 0;
@@ -233,10 +194,27 @@ header {
 
 /*-----------------------------Firma--------------------------*/
 
+:root {
+    --firma-font-title: var(--main-font);
+    --firma-font-title-size: var(--tam-big);
+    --firma-font-title-color: var(--color1);
+
+    --firma-font: var(--sec-font);
+    --firma-font-size: var(--tam-reg);
+    --firma-font-color: black;
+
+    --firma-txt-align: justify;
+    --firma-bg-color: none;
+    --firma-ov-bg-color: var(--color3);
+    /*linear-gradient( to right, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%);*/
+    /* --firma-ov-bg-color-res: linear-gradient( to top, rgba(255,252,242,1), rgba(46, 53, 50, 0.3) 90%); */
+    --firma-ov-bg-color-res: var(--color3);
+}
+
 .backFirma {
     background-color: var(--firma-bg-color);
     padding: 50px;
-    margin-bottom: 20vh  ;
+    margin-bottom: 20vh;
     text-align: left;
     bottom: 0px;
 }
@@ -252,7 +230,7 @@ header {
     margin-right: 50px;
 }
 
-.backFirma p strong{
+.backFirma p strong {
     color: var(--color2);
 }
 
@@ -324,6 +302,32 @@ header {
 
 
 /*-----------------------------Contacto--------------------------*/
+
+:root {
+    --contacto-font-title: var(--main-font);
+    --contacto-font-title-size: var(--tam-big);
+    --contacto-font-title-color: var(--color1);
+
+    --contacto-font: var(--sec-font);
+    --contacto-font-size: var(--tam-reg);
+    --contacto-font-color: var(--color2);
+
+    --contacto-font-label: var(--sec-font);
+    --contacto-font-label-size: var(--tam-reg);
+    --contacto-font-label-color: var(--color2);
+
+    --contacto-form-control-placeholder-color: var(--color2);
+    --contacto-form-control-color: var(--color2);
+    --contacto-form-control-border-color: var(--color2);
+    /* --contacto-form-control-border-color: var(--color2); */
+
+    --contacto-bg-color: none;
+    --contacto-bg2-color: rgba(255, 252, 242, 0.9);
+    /* --contacto-bg2-color: rgba(255,255,255,0.9); */
+    --contacto-ov-bg-color: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+}
+
 .containerStyleContacto {
     background-color: var(--contacto-bg-color);
     margin: 15vh 0vh 10vh 0vh;
@@ -350,8 +354,8 @@ header {
     color: var(--contacto-form-control-color);
     border-radius: 0px;
     background: none;
-    border: none; 
-    border-bottom: 1px solid var(--contacto-form-control-border-color); 
+    border: none;
+    border-bottom: 1px solid var(--contacto-form-control-border-color);
     border-left: 1px solid var(--contacto-form-control-border-color);
 
 }
@@ -359,8 +363,10 @@ header {
 .containerForm {
     padding: 15px;
     background-color: var(--color3);
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
-    border-radius: 10px; /* Adjust radius as needed */
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+    /* Adjust shadow as needed */
+    border-radius: 10px;
+    /* Adjust radius as needed */
 }
 
 
@@ -456,6 +462,9 @@ header {
 }
 
 /*----------------------------- Acerca de nosotros --------------------------*/
+
+
+
 .acerca-nosotros .pro-sidebar {
     background: #F2F2F2;
     border-radius: 10px;
@@ -468,14 +477,14 @@ header {
 
 .pro-sidebar {
     position: sticky;
-    top: 0; 
-    height: 100vh; 
-    overflow-y: auto; 
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 @media (max-width: 1400px) {
     .pro-sidebar {
-        display: none; 
+        display: none;
     }
 }
 
@@ -516,7 +525,7 @@ header {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    z-index: 2;
+    z-index: -1;
 }
 
 .content {
@@ -526,8 +535,8 @@ header {
 .main-content {
     flex: 3;
     padding: 20px;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
 .main-content section {
@@ -548,81 +557,81 @@ header {
 .quienes-somos-section {
     background-color: white;
     font-family: 'Calibri Light';
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
 
 .quienes-somos-content {
-    width: 68%; 
-    padding-right: 20px; 
+    width: 68%;
+    padding-right: 20px;
 }
-  
-  .quienes-somos-title {
+
+.quienes-somos-title {
     display: inline-block;
     margin-right: 10px;
     position: relative;
     font-weight: bold;
-  }
-  
-  .quienes-somos-title::after {
+}
+
+.quienes-somos-title::after {
     content: '';
     position: absolute;
     left: 100%;
     top: 50%;
     height: 2px;
     background-color: red;
-    width: calc(300%); 
+    width: calc(300%);
     transform: translateY(-50%);
-  }
-  
-  .quienes-somos-text {
+}
+
+.quienes-somos-text {
     color: #333;
     text-align: justify;
     line-height: 1.6;
     text-size-adjust: 100%;
     font-size: 1.2em;
-  }
-  
-  .quienes-somos-image {
-    width: 52vw; 
-    height: auto; 
-    position: absolute; 
-    right: -24vw; 
-    top: 0; 
-    bottom: 0; 
-    transition: all 0.3s ease; 
-  }
-  
-  @media (max-width: 1000px) {
+}
+
+.quienes-somos-image {
+    width: 52vw;
+    height: auto;
+    position: absolute;
+    right: -24vw;
+    top: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1000px) {
     .quienes-somos-image {
-      width: 100%; 
-      position: relative; 
-      right: 0; 
-      top: auto; 
-      bottom: auto; 
-      order: 2; 
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: auto;
+        bottom: auto;
+        order: 2;
     }
-  
+
     .quienes-somos-section {
-      flex-direction: column; 
+        flex-direction: column;
     }
-  }
+}
 
 .mision {
-    background-color: #D6292A; 
-    border-radius: 15px; 
-    padding: 20px; 
-    margin: 20px 0; 
+    background-color: #D6292A;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
     font-family: 'Calibri Light';
 }
 
 .mision h2 {
-    margin-top: 0; 
+    margin-top: 0;
     color: white;
     font-weight: bold;
-    
+
 }
 
 .mision p {
@@ -632,10 +641,10 @@ header {
 }
 
 .vision {
-    background-color: #E64F4F; 
-    border-radius: 15px; 
-    padding: 20px; 
-    margin: 20px 0; 
+    background-color: #E64F4F;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
     font-family: 'Calibri Light';
 }
 
@@ -657,7 +666,7 @@ header {
     font-weight: bold;
 }
 
-#valores p{
+#valores p {
     font-family: 'Calibri Light';
     font-size: 1.2em;
 }
@@ -665,32 +674,32 @@ header {
 .principios-section {
     background-color: white;
     font-family: 'Calibri Light';
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    position: relative; 
-    margin-bottom: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .principios-title {
     position: relative;
-    width: 100%; 
-    margin-bottom: 10px; 
+    width: 100%;
+    margin-bottom: 10px;
     margin-right: 20px;
-    margin-left: -70px; 
+    margin-left: -70px;
     font-family: 'Calibri Light';
     font-weight: bold;
-    text-align: end ;
+    text-align: end;
 }
 
 .principios-title::before {
     position: absolute;
     content: '';
-    left: 0; 
+    left: 0;
     top: 50%;
     height: 2px;
     background-color: red;
-    width: 75%; 
+    width: 75%;
     transform: translateY(-50%);
 }
 
@@ -700,12 +709,12 @@ header {
     line-height: 1.6;
     text-size-adjust: 100%;
     font-size: 1.2em;
-    width: 90%; 
+    width: 90%;
     font-family: 'Calibri Light';
-  }
-  
+}
+
 .principios-image {
-    margin-top: 10px; 
+    margin-top: 10px;
     width: 28vw;
     height: 100%;
     position: absolute;
@@ -715,51 +724,54 @@ header {
     object-fit: contain;
     transition: all 0.3s ease;
 }
-  
-  @media (max-width: 1000px) {
+
+@media (max-width: 1000px) {
     .principios-image {
-      width: 100%; 
-      position: relative; 
-      right: 0; 
-      top: auto; 
-      bottom: auto; 
-      order: 2; 
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: auto;
+        bottom: auto;
+        order: 2;
     }
-  
+
     .principios-section {
-      flex-direction: column; 
+        flex-direction: column;
     }
-  }
+}
 
 #organigrama {
     font-family: 'Calibri Light';
 }
-#organigrama h2{
+
+#organigrama h2 {
     font-weight: bold;
 }
-#organigrama img{
+
+#organigrama img {
     width: 100%;
     height: auto;
 }
-  
+
 /*----------------------------- Carousel Inicio --------------------------*/
 .caption-left {
     text-align: left;
     right: auto;
     left: 15%;
     margin-bottom: 15vh;
-    
+
 }
-.caption-left h3{
+
+.caption-left h3 {
     right: auto;
-    background-color: rgba(214,41,42,0.8);
+    background-color: rgba(214, 41, 42, 0.8);
     padding: 5vh;
 }
 
 .standard-image {
-    object-fit: cover; 
-    width: 100%; 
-    height: 70vh; 
+    object-fit: cover;
+    width: 100%;
+    height: 70vh;
 }
 
 @media (max-width: 991px) {
@@ -773,7 +785,7 @@ header {
         margin-bottom: auto;
     }
 
-    
-    
-    
+
+
+
 }

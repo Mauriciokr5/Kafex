@@ -9,14 +9,13 @@ const Header = () => {
     return (
 
         <header className="container">
-            <div className="container">
-                <Navbar expand="lg" className={'header'}>
+                <Navbar expand="lg" className="header">
                     <Link to="/" className="navbar-brand">
                         <img src={logoBlanco} alt="Logo" className="logo" ></img>
                     </Link>
                     <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" />
                     <Navbar.Collapse id="navbar-nav" className="justify-content-end ">
-                        <Nav className="ml-auto navoptions">
+                        <Nav className="ml-auto nav-options">
                             <Link to="/" className="nav-link">Inicio</Link>
                             <Link to="/acerca-nosotros" className="nav-link">Acerca de nosotros</Link>
                             <Link to="/Especialidades" className="nav-link">Servicios</Link>
@@ -26,8 +25,6 @@ const Header = () => {
                     </Navbar.Collapse>
 
                 </Navbar>
-            </div>
-
         </header>
     );
 };
