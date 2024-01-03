@@ -482,12 +482,6 @@ header {
     overflow-y: auto;
 }
 
-@media (max-width: 1400px) {
-    .pro-sidebar {
-        display: none;
-    }
-}
-
 .acerca-nosotros .pro-sidebar .menu-item {
     color: #000;
     background-color: #D9D9D9;
@@ -582,7 +576,7 @@ header {
     top: 50%;
     height: 2px;
     background-color: red;
-    width: calc(300%);
+    width: 400%;
     transform: translateY(-50%);
 }
 
@@ -592,6 +586,18 @@ header {
     line-height: 1.6;
     text-size-adjust: 100%;
     font-size: 1.2em;
+    margin-bottom: -20px;
+}
+
+.quienes-somos-text2 {
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    text-size-adjust: 100%;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: -20px;
+    width: 90%;
 }
 
 .quienes-somos-image {
@@ -602,21 +608,6 @@ header {
     top: 0;
     bottom: 0;
     transition: all 0.3s ease;
-}
-
-@media (max-width: 1000px) {
-    .quienes-somos-image {
-        width: 100%;
-        position: relative;
-        right: 0;
-        top: auto;
-        bottom: auto;
-        order: 2;
-    }
-
-    .quienes-somos-section {
-        flex-direction: column;
-    }
 }
 
 .mision {
@@ -725,7 +716,49 @@ header {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 1000px) {
+#organigrama {
+    font-family: 'Calibri Light';
+}
+
+#organigrama h2 {
+    font-weight: bold;
+}
+
+#organigrama img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1400px) {
+    .pro-sidebar {
+        display: none;
+    }
+
+    .quienes-somos-text2 {
+        width: 100%;
+    }
+    .quienes-somos-image {
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: auto;
+        bottom: auto;
+        order: 2;
+    }
+
+    .quienes-somos-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .quienes-somos-section {
+        flex-direction: column;
+    }
+
+    .quienes-somos-title::after {
+        width: 400%;
+    }
+
     .principios-image {
         width: 100%;
         position: relative;
@@ -738,19 +771,19 @@ header {
     .principios-section {
         flex-direction: column;
     }
-}
 
-#organigrama {
-    font-family: 'Calibri Light';
-}
+    .principios-text{
+        width: 100%;
+    }
 
-#organigrama h2 {
-    font-weight: bold;
-}
+    .principios-title {
+        margin-right: 0;
+        margin-left: 0;
+    }
 
-#organigrama img {
-    width: 100%;
-    height: auto;
+    .principios-title::before {
+        width: 62%;
+    }
 }
 
 /*----------------------------- Carousel Inicio --------------------------*/

@@ -79,7 +79,7 @@ const AcercaNosotros = () => {
             </Carousel>
           </Col>
 
-          <Col lg={9}>
+          <Col lg={9} className='main-content'>
             <div className="main-content">
               <section id="quienes-somos" className="quienes-somos-section">
                 <div className="quienes-somos-content">
@@ -88,9 +88,13 @@ const AcercaNosotros = () => {
                     <p className="quienes-somos-text">
                       Corporativo Kafex, es una Empresa dedicada en brindar un servicio de Transportación y Logística Marítima Terrestre, y aérea ofreciéndole un servicio Integral logístico de su mercancía en trayecto, a nivel
                       Nacional e Internacional, formando parte de un grupo corporativo
-                      de empresas exitosas en su ramo. Las rutas que en la actualidad manejamos son las siguientes: Estados Unidos, Canadá, Centro y Sudamérica. (Como <br></br> Servicio Terrestre)
-                      <br></br>
-                      La empresa se creó el 19 de noviembre del 2019, realizando más de <br></br> 10 mil viajes en todo lo que lleva de su existencia.
+                      de empresas exitosas en su ramo. Las rutas que en la actualidad manejamos son las siguientes: Estados Unidos, Canadá, Centro y Sudamérica. (Como Servicio Terrestre)
+                    </p>
+                    <p className="quienes-somos-text2">
+                     La empresa se creó el 19 de noviembre del 2019, realizando más de 10 mil viajes en todo lo que lleva de su existencia.
+                    </p>
+                    <p className="quienes-somos-text3">
+                       
                     </p>
                   </div>
                   <Col lg={{ span: 5, offset: 2 }} className="order-lg-2 d-flex align-items-center justify-content-center ">
