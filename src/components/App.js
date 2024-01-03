@@ -14,6 +14,7 @@ import AcercaNosotros from './AcercaNosotros';
 import carreteraVideo from '../images/carreteraVideo.mp4';
 
 import { FaWhatsapp } from 'react-icons/fa';
+import Servicios from './Servicios';
 
 function App() {
   const [showPopup, setShowPopup] = useState(true);
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/acerca-nosotros" element={<AcercaNosotros />} />
+          <Route path="/servicios" element={<Servicios />} />
         </Routes>
       </Router>
       <Footer />

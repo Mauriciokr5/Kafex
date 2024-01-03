@@ -18,7 +18,7 @@ const Header = () => {
                         <Nav className="ml-auto nav-options">
                             <Link to="/" className="nav-link">Inicio</Link>
                             <Link to="/acerca-nosotros" className="nav-link">Acerca de nosotros</Link>
-                            <Link to="/Especialidades" className="nav-link">Servicios</Link>
+                            <Link to="/servicios" className="nav-link">Servicios</Link>
                             <Link to="/#Contacto" className="nav-link">Contacto</Link>
                         </Nav>
 

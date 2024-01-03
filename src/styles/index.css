@@ -463,8 +463,6 @@ header {
 
 /*----------------------------- Acerca de nosotros --------------------------*/
 
-
-
 .acerca-nosotros .pro-sidebar {
     background: #F2F2F2;
     border-radius: 10px;
@@ -786,6 +784,220 @@ header {
     }
 }
 
+/*----------------------------- Servicios --------------------------*/
+
+.tipos-servicio-section {
+    font-family: 'Calibri Light';
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.tipos-servicio-content {
+    width: 100%;
+    padding-right: 20px;
+}
+
+.tipos-servicio-title {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.tipos-servicio-title::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    height: 2px;
+    background-color: red;
+    width: 400%;
+    transform: translateY(-50%);
+}
+
+.tipos-servicio-text {
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    text-size-adjust: 100%;
+    font-size: 1.2em;
+}
+
+.tipos-servicio-carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    order: 2;
+    padding-left: 10px;
+    border-radius: 10px;
+    color: white; 
+}
+
+.carousel-tipos-servicios-image {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    filter: brightness(80%);
+}
+
+.carousel-tipos-servicio-titulo {
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 16px 16px 16px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-tipos-servicio-texto {
+    text-align: justify;
+    background-color: transparent !important;
+    text-shadow: 16px 16px 16px rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
+}
+
+.video-separado-container {
+    width: 100vw; 
+    height: 200px; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.video-separado-servicios {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -1; 
+}
+
+.texto-encima-video-separador {
+    content: none;
+    background-color: transparent !important;
+    position: absolute;
+    top: 50%; 
+    left: 40%; 
+    transform: translate(-90%, -50%); 
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3; 
+}
+
+.modalidades-servicio-section {
+    background-color: white;
+    font-family: 'Calibri Light';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.modalidades-servicio-title {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Calibri Light';
+    font-weight: bold;
+    text-align: end; 
+}
+
+.modalidades-servicio-title::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    height: 2px;
+    background-color: red;
+    width: 65%;
+    transform: translateY(-50%);
+}
+
+.modalidades-servicio-text {
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    text-size-adjust: 100%;
+    font-size: 1.2em;
+    width: 100%;
+    font-family: 'Calibri Light';
+    margin-top: 40 px;
+}
+
+
+@media (max-width: 1400px) {
+    .tipos-servicio-text {
+        width: 100%;
+    }
+
+    .tipos-servicio-image {
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: auto;
+        bottom: auto;
+        order: 2;
+    }
+
+    .tipos-servicio-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .tipos-servicio-section {
+        flex-direction: column;
+    }
+
+    .tipos-servicio-title::after {
+        width: 400%;
+    }
+
+    .tipos-servicio-carousel{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        right: 0;
+        top: auto;
+        bottom: auto;
+        order: 2;
+        padding-left: 10px;
+        border-radius: 10px;
+        color: white; 
+        background-color: transparent; 
+    }
+
+    .carousel-tipos-servicio-texto {
+        text-align: justify;
+        background-color: transparent !important;
+        text-shadow: 16px 16px 16px rgba(0, 0, 0, 0.5) !important;
+        font-size: 1.0em !important;
+    }
+
+    .texto-encima-video-separador {
+        left: 50%;
+    }
+
+    .modalidades-servicio-title {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .modalidades-servicio-title::before {
+        width: 30%;
+    }
+
+}
+
+
 /*----------------------------- Carousel Inicio --------------------------*/
 .caption-left {
     text-align: left;
@@ -817,8 +1029,4 @@ header {
         right: auto;
         margin-bottom: auto;
     }
-
-
-
-
 }
