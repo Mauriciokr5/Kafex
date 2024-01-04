@@ -5,17 +5,20 @@ import image2 from '../images/2AcercaDeNosotros.jpg';
 import image3 from '../images/3AcercaDeNosotros.jpg';
 import image4 from '../images/TrailerNegroPNG.png';
 import image5 from '../images/ImgDerechaAcercaDeNostros.jpg';
+import imageLoading from '../images/BannerAcercadeNosotrosLoading.jpg';
 import organigrama from '../images/organigrama.png';
 import { Nav, Container, Row, Col, Carousel } from 'react-bootstrap';
 import Header from './Header';
 
 const AcercaNosotros = () => {
-
   const [activeItem, setActiveItem] = useState('¿Quienes somos?');
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   const handleItemClick = (name, id) => () => {
     setActiveItem(name);
     scrollTo(id);
   };
+
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,19 +26,25 @@ const AcercaNosotros = () => {
     }
   };
 
+  const onVideoLoad = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <div className="acerca-nosotros">
       <div className='header-combinado-container'>
-        <video autoPlay loop muted className='header-combinado-video'>
+        {!videoLoaded && (
+          <img src={imageLoading} alt="Cargando video..." className="header-combinado-video" />
+        )}
+        <video autoPlay loop muted className='header-combinado-video' onLoadedData={onVideoLoad}>
           <source src={bannerAcercadeNosotros} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <Header />
         <div className="texto-encima header-combinado-main-title">
-
           <p>ACERCA DE NOSOTROS</p>
         </div>
-      </div >
+      </div>
 
       <Container >
         <Row>
@@ -91,10 +100,10 @@ const AcercaNosotros = () => {
                       de empresas exitosas en su ramo. Las rutas que en la actualidad manejamos son las siguientes: Estados Unidos, Canadá, Centro y Sudamérica. (Como Servicio Terrestre)
                     </p>
                     <p className="quienes-somos-text2">
-                     La empresa se creó el 19 de noviembre del 2019, realizando más de 10 mil viajes en todo lo que lleva de su existencia.
+                      La empresa se creó el 19 de noviembre del 2019, realizando más de 10 mil viajes en todo lo que lleva de su existencia.
                     </p>
                     <p className="quienes-somos-text3">
-                       
+
                     </p>
                   </div>
                   <Col lg={{ span: 5, offset: 2 }} className="order-lg-2 d-flex align-items-center justify-content-center ">

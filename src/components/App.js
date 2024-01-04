@@ -10,7 +10,6 @@ import Inicio from './Inicio';
 import ContactoPagina from './ContactoPagina';
 import Footer from './Footer';
 import AcercaNosotros from './AcercaNosotros';
-import carreteraVideo from '../images/carreteraVideo.mp4';
 
 import { FaWhatsapp } from 'react-icons/fa';
 import Servicios from './Servicios';
@@ -24,9 +23,6 @@ function App() {
     setshowWA(true);
   };
 
-  const containerStyle = {
-    backgroundImage: `url(${carreteraVideo})`
-  };
 
   return (
     <div className="App">

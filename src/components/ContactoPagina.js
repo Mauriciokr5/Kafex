@@ -4,6 +4,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import BannerIndex from '../images/BannerIndex.mp4';
 import logo from '../images/kafex-logo.png';
+import imageLoading from '../images/BannerIndexLoading.jpg';
 
 const ContactoPagina = () => {
     const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ const ContactoPagina = () => {
         telefono: '',
         mensaje: '',
     });
-
+    const [videoLoaded, setVideoLoaded] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
     const [alertType, setAlertType] = useState('success'); // 'success' o 'danger'
@@ -53,9 +54,17 @@ const ContactoPagina = () => {
     const handleCloseAlert = () => {
         setShowAlert(false);
     };
+
+    const onVideoLoad = () => {
+        setVideoLoaded(true);
+    };
+
     return (
         <div className='header-combinado-container'>
-            <video autoPlay loop muted className='header-combinado-video'>
+            {!videoLoaded && (
+                <img src={imageLoading} alt="Cargando video..." className="header-combinado-video" />
+            )}
+            <video autoPlay loop muted className='header-combinado-video' onLoadedData={onVideoLoad}>
                 <source src={BannerIndex} type="video/mp4" />
                 El navegador no soporta video.
             </video>
@@ -65,7 +74,7 @@ const ContactoPagina = () => {
                         <Link to="/" ><IoIosArrowBack className='contacto-pagina-flecha' /></Link>
                     </Col>
                     <Col lg={{ span: 2, offset: 0 }} xs={{ span: 6, offset: 0 }} className='order-lg-2'>
-                        <img src={logo} alt="Logo" className="logo" style={{ width: '150px',  float: 'right' }}></img>
+                        <img src={logo} alt="Logo" className="logo" style={{ width: '150px', float: 'right' }}></img>
                     </Col>
                     <Col lg={{ span: 8, offset: 0 }} xs={{ span: 12, offset: 0 }} className="contacto-pagina-container order-lg-1">
                         <h1 className='contacto-pagina-titulo'>Cotización</h1>
@@ -101,7 +110,7 @@ const ContactoPagina = () => {
 
 
                     </Col>
-                    
+
                 </Row>
             </Container>
             <Toast
