@@ -5,7 +5,7 @@
     /*rgba(214,4,42,)*/
     --color3: #FFFCF2;
     /*rgba(255,252,242,)*/
-    --color4: #931621;
+    --color4: #000;
     /**/
     --color5: #58A4B0;
     /**/
@@ -36,7 +36,7 @@ body {
 .header-combinado-video {
     position: absolute;
     width: 100%;
-    height: 99%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
@@ -77,7 +77,9 @@ nav a {
 
 .logo {
     display: block;
-    width: 50px;
+    width: 80px;
+    /* width: 100%; */
+    /* height: 100%; */
     height: auto;
 }
 
@@ -124,6 +126,9 @@ header {
         gap: 5px;
         margin-right: 0px;
     }
+    .nav-options a{
+        padding-left: 30px;
+    }
 }
 
 
@@ -147,7 +152,7 @@ header {
     top: 15vh;
     left: 0;
     width: 100%;
-    height: 85vh;
+    height: 88vh;
     background: var(--home-ov-bg-color);
 
 }
@@ -316,8 +321,8 @@ header {
     --contacto-font-label-size: var(--tam-reg);
     --contacto-font-label-color: var(--color2);
 
-    --contacto-form-control-placeholder-color: var(--color2);
-    --contacto-form-control-color: var(--color2);
+    --contacto-form-control-placeholder-color: var(--color4);
+    --contacto-form-control-color: var(--color4);
     --contacto-form-control-border-color: var(--color2);
     /* --contacto-form-control-border-color: var(--color2); */
 
@@ -356,8 +361,12 @@ header {
     background: none;
     border: none;
     border-bottom: 1px solid var(--contacto-form-control-border-color);
-    border-left: 1px solid var(--contacto-form-control-border-color);
+    /* border-left: 1px solid var(--contacto-form-control-border-color); */
+    border-radius: 50px;
+}
 
+.contacto-label{
+    padding: 10px;
 }
 
 .containerForm {
@@ -1028,5 +1037,38 @@ header {
         text-align: center;
         right: auto;
         margin-bottom: auto;
+    }
+}
+
+
+/*----------------------------- Contacto Pagina --------------------------*/
+
+.contacto-pagina-container {
+    padding: 4vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Adjust shadow as needed */
+    border-radius: 10px;
+    /* Adjust radius as needed */
+    margin-top: 20vh;
+}
+
+.contacto-pagina-flecha {
+    color: white;
+    font-size: 10vh;
+    margin-top: 5vh;
+    transition: color 0.3s ease; 
+}
+
+.contacto-pagina-flecha:hover {
+    color: var(--color2); 
+}
+
+
+
+
+@media (max-width: 991px) {
+
+    .contacto-pagina-container {
+        margin-top: 0vh;
     }
 }

@@ -19,7 +19,7 @@ const Header = () => {
                             <Link to="/" className="nav-link">Inicio</Link>
                             <Link to="/acerca-nosotros" className="nav-link">Acerca de nosotros</Link>
                             <Link to="/servicios" className="nav-link">Servicios</Link>
-                            <Link to="/#Contacto" className="nav-link">Contacto</Link>
+                            <Link to="/contacto" className="nav-link">Contacto</Link>
                         </Nav>
 
                     </Navbar.Collapse>

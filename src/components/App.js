@@ -7,8 +7,7 @@ import {
   NavLink
 } from "react-router-dom";
 import Inicio from './Inicio';
-import Objetivo from './Objetivo';
-import Contacto from './Contacto';
+import ContactoPagina from './ContactoPagina';
 import Footer from './Footer';
 import AcercaNosotros from './AcercaNosotros';
 import carreteraVideo from '../images/carreteraVideo.mp4';
@@ -36,6 +35,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/acerca-nosotros" element={<AcercaNosotros />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/contacto" element={<ContactoPagina />} />
         </Routes>
       </Router>
       <Footer />
