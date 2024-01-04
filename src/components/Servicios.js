@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import Header from './Header';
 import bannerServicios from '../images/BannerServicios.mp4';
+import separadorVid from '../images/ServiciosSeparador1.mp4';
 import { Nav, Container, Row, Col, Carousel } from 'react-bootstrap';
 import image1 from '../images/ServicioTerrestre.jpg';
 import image2 from '../images/ServicioMaritimo.jpg';
+import CardCarousel from './CardCarousel';
+import Especialidades from './Especialidades';
 
 const Servicios = () => {
 
@@ -101,7 +104,7 @@ const Servicios = () => {
                                     </div>
                                     <div className='video-separado-container'>
                                         <video autoPlay loop muted className='video-separado-servicios'>
-                                        <source src={bannerServicios} type="video/mp4" />
+                                        <source src={separadorVid} type="video/mp4" />
                                         Your browser does not support the video tag.
                                         </video>
                                         <div>
@@ -118,6 +121,9 @@ const Servicios = () => {
                                     <p className='modalidades-servicio-text'>
                                         Las diferentes modalidades de transporte que en la actualidad ofrecemos:
                                     </p>
+                                </div>
+                                <div>
+                                    <Especialidades />
                                 </div>
                             </section>
                         </div>
