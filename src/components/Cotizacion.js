@@ -6,6 +6,7 @@ import BannerIndex from '../images/BannerIndex.mp4';
 import logo from '../images/kafex-logo.png';
 import imageLoading from '../images/BannerIndexLoading.jpg';
 import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 const Cotizacion = () => {
     const [formData, setFormData] = useState({
@@ -22,23 +23,20 @@ const Cotizacion = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // const url = `https://docs.google.com/forms/d/e/1FAIpQLSf2nP-O-Agv3cDRYTEYsHoVYYkdj7edr8ej7juzKJFy548pAw/formResponse?entry.117229671=${encodeURIComponent(nombre)}&entry.1970792112=${encodeURIComponent(correo)}&entry.61613825=${encodeURIComponent(telefono)}&entry.1932001063=${encodeURIComponent(mensaje)}`;
-        const url = `https://docs.google.com/forms/d/e/1FAIpQLSeIYnxGnavuMcAim-I3rNMdsxEo_H7u_XhrrzJB4AIyIzgyQQ/formResponse?entry.1929602974=${encodeURIComponent(formData.nombre)}`;
-        setShowAlert(true);
-        setAlertType('success');
-        setAlertMessage('Formulario enviado exitosamente');
 
         try {
-            await axios.post(url);
-
-            handleCloseWithAnimation();
+            // Asegúrate de reemplazar 'your_service_id', 'your_template_id' y 'your_user_id' con tus propios IDs.
+            const result = await emailjs.sendForm('service_r3w2p2b', 'template_1qfbxg6', e.target, 'HfRkGYrrFzv5G6d7N');
+            console.log(result.text);
+            setAlertMessage('Formulario enviado exitosamente');
+            setAlertType('success');
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
-            // setShowAlert(true);
-            // setAlertType('danger');
-            // setAlertMessage('Error al enviar el formulario. Inténtelo de nuevo.');
+            setAlertMessage('Error al enviar el formulario. Inténtelo de nuevo.');
+            setAlertType('danger');
         }
 
+        setShowAlert(true);
     };
 
     const handleChange = (e) => {

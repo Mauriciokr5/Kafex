@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Toast } from 'react-bootstrap';
 import { IoIosPin } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
-
+import emailjs from 'emailjs-com';
 import axios from 'axios';
 
 const Contacto = () => {
@@ -20,27 +20,20 @@ const Contacto = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // const url = `https://docs.google.com/forms/d/e/1FAIpQLSf2nP-O-Agv3cDRYTEYsHoVYYkdj7edr8ej7juzKJFy548pAw/formResponse?entry.117229671=${encodeURIComponent(nombre)}&entry.1970792112=${encodeURIComponent(correo)}&entry.61613825=${encodeURIComponent(telefono)}&entry.1932001063=${encodeURIComponent(mensaje)}`;
-        const url = ``;
-        setShowAlert(true);
-        setAlertType('success');
-        setAlertMessage('Formulario enviado exitosamente');
 
         try {
-            await axios.post(url);
-
-            handleCloseWithAnimation();
+            // Asegúrate de reemplazar 'your_service_id', 'your_template_id' y 'your_user_id' con tus propios IDs.
+            const result = await emailjs.sendForm('service_r3w2p2b', 'template_i0bvr36', e.target, 'HfRkGYrrFzv5G6d7N');
+            console.log(result.text);
+            setAlertMessage('Formulario enviado exitosamente');
+            setAlertType('success');
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
-            // setShowAlert(true);
-            // setAlertType('danger');
-            // setAlertMessage('Error al enviar el formulario. Inténtelo de nuevo.');
+            setAlertMessage('Error al enviar el formulario. Inténtelo de nuevo.');
+            setAlertType('danger');
         }
 
-        setNombre('');
-        setCorreo('');
-        setTelefono('');
-        setMensaje('');
+        setShowAlert(true);
     };
 
     const handleChange = (e) => {
