@@ -20,7 +20,8 @@ const ContactoPagina = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const url = `https://docs.google.com/forms/d/e/1FAIpQLSf2nP-O-Agv3cDRYTEYsHoVYYkdj7edr8ej7juzKJFy548pAw/formResponse?entry.117229671=${encodeURIComponent(nombre)}&entry.1970792112=${encodeURIComponent(correo)}&entry.61613825=${encodeURIComponent(telefono)}&entry.1932001063=${encodeURIComponent(mensaje)}`;
+        // const url = `https://docs.google.com/forms/d/e/1FAIpQLSf2nP-O-Agv3cDRYTEYsHoVYYkdj7edr8ej7juzKJFy548pAw/formResponse?entry.117229671=${encodeURIComponent(nombre)}&entry.1970792112=${encodeURIComponent(correo)}&entry.61613825=${encodeURIComponent(telefono)}&entry.1932001063=${encodeURIComponent(mensaje)}`;
+        const url = ``;
         setShowAlert(true);
         setAlertType('success');
         setAlertMessage('Formulario enviado exitosamente');
@@ -67,7 +68,7 @@ const ContactoPagina = () => {
                         <img src={logo} alt="Logo" className="logo" style={{ width: '150px',  float: 'right' }}></img>
                     </Col>
                     <Col lg={{ span: 8, offset: 0 }} xs={{ span: 12, offset: 0 }} className="contacto-pagina-container order-lg-1">
-
+                        <h1 className='contacto-pagina-titulo'>Cotización</h1>
                         <form onSubmit={handleSubmit}>
                             <div className="row mb-3">
                                 <div className="col">

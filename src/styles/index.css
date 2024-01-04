@@ -1066,12 +1066,17 @@ header {
 /*----------------------------- Contacto Pagina --------------------------*/
 
 .contacto-pagina-container {
-    padding: 4vw;
+    padding: 3vw;
     background-color: rgba(255, 255, 255, 0.85);
     /* Adjust shadow as needed */
     border-radius: 10px;
     /* Adjust radius as needed */
     margin-top: 20vh;
+}
+
+.contacto-pagina-titulo{
+    margin-bottom: 2vh;
+    color: var(--color2);
 }
 
 .contacto-pagina-flecha {
