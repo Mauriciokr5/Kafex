@@ -7,7 +7,7 @@ import {
   NavLink
 } from "react-router-dom";
 import Inicio from './Inicio';
-import ContactoPagina from './ContactoPagina';
+import Cotizacion from './Cotizacion';
 import Footer from './Footer';
 import AcercaNosotros from './AcercaNosotros';
 
@@ -31,7 +31,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/acerca-nosotros" element={<AcercaNosotros />} />
           <Route path="/servicios" element={<Servicios />} />
-          <Route path="/contacto" element={<ContactoPagina />} />
+          <Route path="/cotizacion" element={<Cotizacion />} />
         </Routes>
       </Router>
       <Footer />

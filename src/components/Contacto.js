@@ -70,15 +70,17 @@ const Contacto = () => {
                 <Row>
 
                     <Col lg={{ span: 4, offset: 1 }}>
-                        <h2>Obtén una cotización adecuada a sus necesidades</h2>
+                        <h2>Contáctanos</h2>
+                        <br></br>
+                        <p>En Kafex, estamos comprometidos a ofrecerte soluciones que se ajusten perfectamente a tus necesidades. Entendemos que cada cliente es único y merece una atención personalizada.</p>
                         <br></br>
                         <p>
                             <IoIosPin /> &nbsp;&nbsp;&nbsp;Plazuela 1 de plaza del Carmen, manzana 29, lote 14, plazas de Aragón.
                         </p>
                         <IoIosMail />
                         &nbsp;&nbsp;&nbsp;
-                        <a href="mailto:operaciones@corporativofax.com.mx">
-                            operaciones@corporativofax.com.mx
+                        <a href="mailto:corporativo@corporativokafex.com.mx">
+                            corporativo@corporativokafex.com.mx
                         </a>
 
                     </Col>

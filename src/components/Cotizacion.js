@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 import BannerIndex from '../images/BannerIndex.mp4';
 import logo from '../images/kafex-logo.png';
 import imageLoading from '../images/BannerIndexLoading.jpg';
+import axios from 'axios';
 
-const ContactoPagina = () => {
+const Cotizacion = () => {
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
@@ -22,7 +23,7 @@ const ContactoPagina = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // const url = `https://docs.google.com/forms/d/e/1FAIpQLSf2nP-O-Agv3cDRYTEYsHoVYYkdj7edr8ej7juzKJFy548pAw/formResponse?entry.117229671=${encodeURIComponent(nombre)}&entry.1970792112=${encodeURIComponent(correo)}&entry.61613825=${encodeURIComponent(telefono)}&entry.1932001063=${encodeURIComponent(mensaje)}`;
-        const url = ``;
+        const url = `https://docs.google.com/forms/d/e/1FAIpQLSeIYnxGnavuMcAim-I3rNMdsxEo_H7u_XhrrzJB4AIyIzgyQQ/formResponse?entry.1929602974=${encodeURIComponent(formData.nombre)}`;
         setShowAlert(true);
         setAlertType('success');
         setAlertMessage('Formulario enviado exitosamente');
@@ -38,10 +39,6 @@ const ContactoPagina = () => {
             // setAlertMessage('Error al enviar el formulario. Inténtelo de nuevo.');
         }
 
-        setNombre('');
-        setCorreo('');
-        setTelefono('');
-        setMensaje('');
     };
 
     const handleChange = (e) => {
@@ -82,26 +79,26 @@ const ContactoPagina = () => {
                             <div className="row mb-3">
                                 <div className="col">
                                     <label htmlFor="nombre" className='contacto-label'>Nombre</label>
-                                    <input type="text" className="form-control" name="nombre" id="nombre" value={formData.nombre} onChange={handleChange} required />
+                                    <input type="text" className="form-control" name="nombre" id="nombre" value={formData.nombre} onChange={handleChange}  />
                                 </div>
                                 <div className="col">
                                     <label htmlFor="apellido" className='contacto-label'>Apellido</label>
-                                    <input type="text" className="form-control" name="apellido" id="apellido" value={formData.apellido} onChange={handleChange} required />
+                                    <input type="text" className="form-control" name="apellido" id="apellido" value={formData.apellido} onChange={handleChange}  />
                                 </div>
                             </div>
                             <div className="row mb-3">
                                 <div className="col">
                                     <label htmlFor="correo" className='contacto-label'>Correo</label>
-                                    <input type="email" className="form-control" name="correo" id="correo" value={formData.correo} onChange={handleChange} required />
+                                    <input type="email" className="form-control" name="correo" id="correo" value={formData.correo} onChange={handleChange}  />
                                 </div>
                                 <div className="col">
                                     <label htmlFor="telefono" className='contacto-label'>Teléfono</label>
-                                    <input type="tel" className="form-control" name="telefono" id="telefono" value={formData.telefono} onChange={handleChange} required />
+                                    <input type="tel" className="form-control" name="telefono" id="telefono" value={formData.telefono} onChange={handleChange}  />
                                 </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="mensaje" className='contacto-label'>Mensaje</label>
-                                <textarea className="form-control" name="mensaje" id="mensaje" value={formData.mensaje} onChange={handleChange} required rows="3"></textarea>
+                                <textarea className="form-control" name="mensaje" id="mensaje" value={formData.mensaje} onChange={handleChange}  rows="3"></textarea>
                             </div>
                             <div className="">
                                 <button type="submit" className="btn btn-primary btnContacto">Enviar</button>
@@ -132,4 +129,4 @@ const ContactoPagina = () => {
     );
 };
 
-export default ContactoPagina;
+export default Cotizacion;
