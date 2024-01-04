@@ -538,6 +538,7 @@ header {
     padding: 20px;
     position: relative;
     overflow: hidden;
+    font-family: var(--main-font);
 }
 
 .main-content section {
@@ -550,14 +551,13 @@ header {
 }
 
 .main-content p {
-    text-align: justify;
     padding: 10px;
     background-color: white;
+    hyphens: auto;
 }
 
 .quienes-somos-section {
     background-color: white;
-    font-family: 'Calibri Light';
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -622,7 +622,6 @@ header {
     border-radius: 15px;
     padding: 20px;
     margin: 20px 0;
-    font-family: 'Calibri Light';
 }
 
 .mision h2 {
@@ -636,6 +635,7 @@ header {
     color: white;
     background-color: #D6292A;
     font-size: 1.2em;
+    text-align: justify;
 }
 
 .vision {
@@ -643,7 +643,6 @@ header {
     border-radius: 15px;
     padding: 20px;
     margin: 20px 0;
-    font-family: 'Calibri Light';
 }
 
 .vision h2 {
@@ -657,21 +656,20 @@ header {
     color: white;
     background-color: #E64F4F;
     font-size: 1.2em;
+    text-align: justify;
 }
 
 #valores h2 {
-    font-family: 'Calibri Light';
     font-weight: bold;
 }
 
 #valores p {
-    font-family: 'Calibri Light';
     font-size: 1.2em;
+    text-align: justify;
 }
 
 .principios-section {
     background-color: white;
-    font-family: 'Calibri Light';
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -685,7 +683,6 @@ header {
     margin-bottom: 10px;
     margin-right: 20px;
     margin-left: -70px;
-    font-family: 'Calibri Light';
     font-weight: bold;
     text-align: end;
 }
@@ -708,7 +705,6 @@ header {
     text-size-adjust: 100%;
     font-size: 1.2em;
     width: 90%;
-    font-family: 'Calibri Light';
 }
 
 .principios-image {
@@ -721,10 +717,6 @@ header {
     bottom: 0;
     object-fit: contain;
     transition: all 0.3s ease;
-}
-
-#organigrama {
-    font-family: 'Calibri Light';
 }
 
 #organigrama h2 {
@@ -741,21 +733,51 @@ header {
         display: none;
     }
 
+    .quienes-somos-text {
+        font-size: var(--tam-small);
+    }
+
     .quienes-somos-text2 {
         width: 100%;
+        font-size: var(--tam-small);
     }
     .quienes-somos-image {
         width: 100%;
         position: relative;
+        left: 0;
         right: 0;
         top: auto;
         bottom: auto;
         order: 2;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mision {
+        margin: -20px;
+    }
+
+    .mision p {
+        font-size: var(--tam-small);
+    }
+
+    .vision {
+        margin: -20px;
+    }
+
+    .vision p {
+        font-size: var(--tam-small);
+    }
+
+    #valores p {
+        font-size: var(--tam-small); 
     }
 
     .quienes-somos-content {
         width: 100%;
         padding-right: 0;
+        font-size: var(--tam-small);
     }
 
     .quienes-somos-section {
@@ -781,6 +803,7 @@ header {
 
     .principios-text{
         width: 100%;
+        font-size: var(--tam-small);
     }
 
     .principios-title {
@@ -789,14 +812,23 @@ header {
     }
 
     .principios-title::before {
-        width: 62%;
+        width: 55%;
+    }
+
+    .texto-encima {
+        position: absolute;
+        top: 50%;
+        left: 44%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: -1;
     }
 }
 
 /*----------------------------- Servicios --------------------------*/
 
 .tipos-servicio-section {
-    font-family: 'Calibri Light';
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -885,6 +917,7 @@ header {
     top: 0;
     left: 0; 
     z-index: -1; 
+    filter: brightness(70%);
 }
 
 .texto-encima-video-separador {
@@ -903,7 +936,6 @@ header {
 
 .modalidades-servicio-section {
     background-color: white;
-    font-family: 'Calibri Light';
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -915,7 +947,6 @@ header {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
-    font-family: 'Calibri Light';
     font-weight: bold;
     text-align: end; 
 }
@@ -938,12 +969,10 @@ header {
     text-size-adjust: 100%;
     font-size: 1.2em;
     width: 100%;
-    font-family: 'Calibri Light';
     margin-top: 40 px;
 }
 
 .text-center {
-    font-family: 'Calibri Light';
     text-align: center;
     font-size: 1.0em;
 }

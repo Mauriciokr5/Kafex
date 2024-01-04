@@ -17,7 +17,7 @@ const Home = () => {
                 <Container className=''>
                     <Row>
                         <Col lg={6}>
-                            <h1 className='header-combinado-main-title'>EL SERVICIO DE TRASNPORTACIÓN PARA TI</h1>
+                            <h1 className='header-combinado-main-title'>EL SERVICIO DE TRANSPORTACIÓN PARA TI</h1>
                             <Button onClick={() => scrollTo('Contacto')} className='home-btn'>Cotizar</Button>
 
                         </Col>

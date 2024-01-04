@@ -23,7 +23,7 @@ const InicioCarousel = () => {
                     alt="Imagen 2"
                 />
                 <Carousel.Caption className="caption-left">
-                    <h3>Servicio de tranporte <br></br>Marítimo</h3>
+                    <h3>Servicio de transporte <br></br>Marítimo</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
