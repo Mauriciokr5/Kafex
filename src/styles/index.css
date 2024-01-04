@@ -933,6 +933,22 @@ header {
     margin-top: 40 px;
 }
 
+.text-center {
+    font-family: 'Calibri Light';
+    text-align: center;
+    font-size: 1.0em;
+}
+
+.Card {
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 270px; 
+    height: 350px; 
+    border: none;
+}
+
 
 @media (max-width: 1400px) {
     .tipos-servicio-text {
@@ -995,6 +1011,12 @@ header {
         width: 30%;
     }
 
+}
+
+@media (max-width: 450px) {
+    .modalidades-servicio-title::before {
+        width: 15%;
+    }
 }
 
 
