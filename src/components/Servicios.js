@@ -121,7 +121,7 @@ const Servicios = () => {
                                             Your browser does not support the video tag.
                                         </video>
                                         <div>
-                                            <p className='texto-encima-video-separador'>El servicio de transporación para ti</p>
+                                            <p className='texto-encima-video-separador'>El servicio de transportación para ti</p>
                                         </div>
                                     </div>
                                 </div>
