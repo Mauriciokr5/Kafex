@@ -3,9 +3,12 @@ import Header from './Header';
 import bannerServicios from '../images/BannerServicios.mp4';
 import loadingImage from '../images/BannerServiciosLoading.jpg';
 import separadorVid from '../images/ServiciosSeparador1.mp4';
+import separadorVid2 from '../images/ServiciosSeparador2.mp4';
+import videoOtros from '../images/ServiciosOtros.mp4';
 import { Nav, Container, Row, Col, Carousel } from 'react-bootstrap';
 import image1 from '../images/ServicioTerrestre.jpg';
 import image2 from '../images/ServicioMaritimo.jpg';
+import image3 from '../images/ServiciosSeguimiento1.png';
 import CardCarousel from './CardCarousel';
 import Especialidades from './Especialidades';
 
@@ -136,9 +139,72 @@ const Servicios = () => {
                                     <Especialidades />
                                 </div>
                             </section>
+                            <section id="seguimiento" className="servicio-seguimiento-texto">
+                                <div className="">
+                                    <Row>
+                                        <Col lg={{ span: 7, offset: 0 }} >
+                                            <h2 className="servicio-seguimiento-titulo">Seguimiento</h2>
+
+                                            <p>
+                                                Contamos con avanzados sistemas de rastreo Satelital y comunicación personalizada para dar informes precisos de cada uno de sus embarques, informándo vía mail, paso a paso el seguimiento de sus embarques.
+                                            </p>
+                                            <p>
+                                                La experiencia de nuestro personal garantiza la tranquilidad y seguridad que su mercancía llegará a tiempo y en buenas condiciones a su destino final.
+                                            </p>
+                                            <p>
+                                                Nuestro Servicio Logístico incluye cuatro reportes oportunos enviados vía e-mail:
+                                            </p>
+                                            <ul>
+                                                <li>Despacho de almacén</li>
+                                                <li>Llegada con el Agente Aduanal</li>
+                                                <li>Cruce de Aduana</li>
+                                                <li>Llegada al destino final</li>
+                                            </ul>
+
+                                        </Col>
+                                        <Col lg={{ span: 5, offset: 0 }} className="d-flex align-items-center  servicio-seguimiento-image-content">
+                                            <img src={image3} alt="Transporte" className="servicio-seguimiento-image" />
+                                        </Col>
+
+                                    </Row>
+                                    <br /><br />
+                                </div>
+                                <div className='video-separado-container'>
+                                    <video autoPlay loop muted className='video-separado-servicios'>
+                                        <source src={separadorVid2} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </section>
+                            <section id="otros" className="servicio-seguimiento-texto">
+                                <div className="">
+                                    <h2 className="servicio-seguimiento-titulo">Otros</h2>
+                                    <Row>
+                                        <Col lg={{ span: 7, offset: 0 }} >
+
+
+                                            <p>
+                                                De igual manera contamos con los permisos para manejar el traslado del Producto Químico Peligroso. Ya que bajo una alianza estratégica con las principales Empresas Nacionales e Internacionales podemos brindarle el servicio que más se adecue a sus necesidades.
+                                            </p>
+
+                                        </Col>
+                                        <Col lg={{ span: 4, offset: 1 }} className="d-flex align-items-center ">
+                                            <div className='otros-video-separado-container'>
+                                                <video autoPlay loop muted className='otros-video-separado-servicios'>
+                                                    <source src={videoOtros} type="video/mp4" />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+                                        </Col>
+
+                                    </Row>
+                                </div>
+
+                            </section>
                         </div>
                     </Col>
                 </Row>
+
             </Container>
 
         </div>

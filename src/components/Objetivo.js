@@ -1,20 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import camion from '../images/TrailerpngIndex.png';
 
 const Objetivo = () => {
-
-    // const containerStyle = {
-    //     // backgroundImage: `url(${garperfirma})`,
-    //     backgroundColor:'#b18d57',
-    //     backgroundSize: 'cover',
-    //     backgroundRepeat: 'no-repeat',
-    //     backgroundPosition: 'center center',
-    //     position: 'relative', // Asegura que el contenedor sea relativo para posicionar elementos hijos
-    //     minHeight: '70vh', // Altura de la ventana visible, ajusta según sea necesario
-        
-    // };
 
 
     return (

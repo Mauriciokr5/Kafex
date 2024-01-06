@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import BannerIndex from '../images/BannerIndex.mp4';
 import logo from '../images/kafex-logo.png';
 import imageLoading from '../images/BannerIndexLoading.jpg';
-import axios from 'axios';
 import emailjs from 'emailjs-com';
 
 const Cotizacion = () => {

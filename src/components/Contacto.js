@@ -3,7 +3,6 @@ import { Form, Button, Container, Row, Col, Toast } from 'react-bootstrap';
 import { IoIosPin } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import emailjs from 'emailjs-com';
-import axios from 'axios';
 
 const Contacto = () => {
     const [formData, setFormData] = useState({
