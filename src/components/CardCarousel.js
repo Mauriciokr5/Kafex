@@ -30,7 +30,7 @@ const CardCarousel = ({ cardData, cardsPerSlide }) => {
     );
   });
 
-  return <Carousel interval={null}>{slides}</Carousel>;
+  return <Carousel interval={3000} >{slides}</Carousel>;
 };
 
 export default CardCarousel;

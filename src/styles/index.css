@@ -728,6 +728,10 @@ header {
     height: auto;
 }
 
+.carousel-control-next-icon .carousel-control-prev-icon{
+    color: red;
+}
+
 @media (max-width: 1400px) {
     .pro-sidebar {
         display: none;
