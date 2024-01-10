@@ -33,7 +33,7 @@ const Especialidades = () => {
     const cardsPerSlide = screenWidth > 768 ? 4 : 1;
     const cardData = [
         {
-            description: 'Cajas secas de y 53´ Importación, exportación Nuevo Laredo, Tamps.',
+            description: 'Cajas secas de 53´ Importación, exportación Nuevo Laredo, Tamps.',
             imageUrl: image1,
         },
         {
